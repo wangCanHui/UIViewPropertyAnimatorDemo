@@ -7,12 +7,13 @@ case easeInOut -> 开始和结尾慢，中间快<br>
 case easeIn -> 开始慢 <br>
 case easeOut -> 结尾慢 <br>
 case linear -> 匀速 <br>
-如下图所示：![image](https://github.com/wangCanHui/UIViewPropertyAnimatorDemo/blob/master/贝塞尔曲线图.png)
+如下图所示：![image](https://github.com/wangCanHui/UIViewPropertyAnimatorDemo/blob/master/四种类型的贝塞尔曲线图.png)
 ####2. 自定义三次方贝塞尔曲线（两种实现方法）
 init(duration: TimeInterval, controlPoint1: CGPoint, controlPoint2: CGPoint, animations: () -> Void)? = nil)
 `duration`:动画持续时间<br>
 `controlPoint1`:贝塞尔曲线的第一个控制点<br>
 `controlPoint2`:贝塞尔曲线的第二个控制点<br>
+如下图所示：![image](https://github.com/wangCanHui/UIViewPropertyAnimatorDemo/blob/master/手动绘制的贝塞尔图形.png)
 ####3. 系统的阻尼振动
 ####4. 自定义阻尼振动，以及暂停、继续、反向、取消等动画效果的Demo
 

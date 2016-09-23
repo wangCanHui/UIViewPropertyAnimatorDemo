@@ -118,6 +118,7 @@ class ViewController: UIViewController {
         })
         print("开始前：",animator.state.rawValue)
         animator.startAnimation()
+    //      animator.pauseAnimation() // 可以试一下用pauseAnimation让animator的状态由inactive 变为 active ，再点击继续即可开始动画
         print("开始后：",animator.state.rawValue)
         
     }

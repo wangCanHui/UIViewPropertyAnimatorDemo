@@ -49,3 +49,5 @@ isReversed = true, 即可使动画反向执行
 stopAnimation
 ####5. 动画三种状态的转换（inactive、active、stopped）
 如下图所示：<br>
+![image](https://github.com/wangCanHui/UIViewPropertyAnimatorDemo/blob/master/%E5%8A%A8%E7%94%BB%E7%8A%B6%E6%80%81.png)
+可以看出stopped状态只是中间的一个过渡状态，实际代码中不能使用这种状态判断动画的当前状态，只能用inactive（休眠）或者active(激活)来判断，有趣的是pause可以使状态由Inactive变为active，但是动画还是暂停状态，需要调用继续动画的方法才能使动画执行。

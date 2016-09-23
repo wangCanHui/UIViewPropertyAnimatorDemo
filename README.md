@@ -39,10 +39,10 @@ UIViewPropertyAnimator(duration: 1, timingParameters: springParameters)<br>
 ![image](https://github.com/wangCanHui/UIViewPropertyAnimatorDemo/blob/master/%E9%98%BB%E5%B0%BC%E6%8C%AF%E5%8A%A8.png)
 #####4.2 暂停动画
 pauseAnimation
-#####4.3 继续动画
+#####4.3 继续动画（两种方法）
 ###### 4.3.1 startAnimation：只能使未完成的动画，继续执行到结束
 ###### 4.3.2 continueAnimation：不仅可以是未完成的动画继续执行到结束，还可以重新制定未完成动画的效果
-continueAnimation(withTimingParameters: nil, durationFactor: animator.fractionComplete)，显然看到使用continueAnimation，还可以改变未完成的动画效果，只需给withTimingParameters参数赋值即可
+continueAnimation(withTimingParameters: nil, durationFactor: animator.fractionComplete)，显然看到使用continueAnimation，还可以改变未完成的动画效果，只需给withTimingParameters参数赋值即可。
 #####4.4 动画反向
 isReversed = true, 即可使动画反向执行
 #####4.5 结束动画

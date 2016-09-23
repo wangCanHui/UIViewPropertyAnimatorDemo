@@ -50,6 +50,9 @@ class ViewController: UIViewController {
         if animator.state == .active{
             // startAnimation 或者 continueAnimation 都可以是使未结束的动画继续执行
 //            animator.startAnimation()
+            //  springParameters 用来测试改变剩余时间的动画效果
+//            let velocity = CGVector(dx: 1, dy: 1)
+//            let springParameters = UISpringTimingParameters(mass: 3, stiffness: 20, damping: 1, initialVelocity: velocity)
             animator.continueAnimation(withTimingParameters: nil, durationFactor: animator.fractionComplete)
             print(animator.state.rawValue)
         }

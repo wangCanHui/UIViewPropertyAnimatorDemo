@@ -190,6 +190,7 @@ class ViewController: UIViewController {
             print("Completion:",position.rawValue)
             self.circleView.alpha = 1.0
             self.circleView.center.x = self.circleRadius
+            self.circleView.transform = CGAffineTransform(scaleX: 1, y: 1)
         }
     }
     

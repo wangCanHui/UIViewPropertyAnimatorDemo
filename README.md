@@ -23,8 +23,13 @@ UIViewPropertyAnimator(duration: 3, timingParameters: bezierParams)<br>
 `controlPoint2`:贝塞尔曲线的第二个控制点，取值范围0~1.0<br>
 ####3. 系统的阻尼振动
 init(duration: TimeInterval, dampingRatio ratio: CGFloat, animations: (@escaping () -> Swift.Void)? = nil)
-`duration`:动画持续时间<br>
+`duration`:动画持续时间（值过大就没什么效果和意义了）<br>
 `dampingRatio`:阻尼系数 1.欠阻尼（取值范围0~1.0 ，值越小振动效果越明显） 2.临界阻尼 取值为1  3.过阻尼（取值范围>1 ，值越大振动越不明显）<br>
 ####4. 自定义阻尼振动，以及暂停、继续、反向、取消等动画效果的Demo
-
-
+#####4.1 使用UISpringTimingParameters的构造方法自定义阻尼振动
+let springParameters = UISpringTimingParameters(mass: 3, stiffness: 20, damping: 1, initialVelocity: velocity)<br>
+UIViewPropertyAnimator(duration: 1, timingParameters: springParameters)
+`mass`:质量参数<br>
+`stiffness`:劲度系数（弹性系数） 描述单位形变量时所产生弹力的大小，F = K * △X (F为弹力，K是劲度系数，△x是弹簧形变量)<br>
+`damping`:阻尼系数 1.欠阻尼（取值范围0~1.0 ，值越小振动效果越明显） 2.临界阻尼 取值为1  3.过阻尼（取值范围>1 ，值越大振动越不明显）<br>
+`initialVelocity`:初始速度（矢量，值越大速度越快）<br>

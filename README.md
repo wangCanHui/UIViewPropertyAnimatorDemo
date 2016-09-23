@@ -34,6 +34,18 @@ UIViewPropertyAnimator(duration: 1, timingParameters: springParameters)<br>
 `stiffness`:劲度系数（弹性系数） 描述单位形变量时所产生弹力的大小，F = K * △X (F为弹力，K是劲度系数，△x是弹簧形变量)<br>
 `damping`:阻尼系数 1.欠阻尼（取值范围0~1.0 ，值越小振动效果越明显） 2.临界阻尼 取值为1  3.过阻尼（取值范围>1 ，值越大振动越不明显）<br>
 `initialVelocity`:初始速度（矢量，值越大速度越快）<br>
-决定动画效果的主要是mass、stiffness、damping、initialVelocity这四个参数，劲度系数（stiffness）越大，质量参数（mass）值也不能过小，阻尼系数（damping）越小，初始速度（initialVelocity）越大，振动效果越明显，而且持续时间越久，反之振动效果越微弱，动画持续时间越短<br>
+决定动画效果的主要是mass、stiffness、damping、initialVelocity这四个参数，劲度系数（stiffness）越大，质量参数（mass）值也不能过小，阻尼系数（damping）越小，初始速度（initialVelocity）越大，振动效果越明显，而且持续时间越久，反之振动效果越微弱，动画持续时间越短。<br>
 为了帮助理解上面的话，截了阻尼振动的图如下所示：<br>
-
+![image](https://github.com/wangCanHui/UIViewPropertyAnimatorDemo/blob/master/%E9%98%BB%E5%B0%BC%E6%8C%AF%E5%8A%A8.png)
+#####4.2 暂停动画
+pauseAnimation
+#####4.3 继续动画
+###### 4.3.1 startAnimation：只能使未完成的动画，继续执行到结束
+###### 4.3.2 continueAnimation：不仅可以是未完成的动画继续执行到结束，还可以重新制定未完成动画的效果
+continueAnimation(withTimingParameters: nil, durationFactor: animator.fractionComplete)，显然看到使用continueAnimation，还可以改变未完成的动画效果，只需给withTimingParameters参数赋值即可
+#####4.4 动画反向
+isReversed = true, 即可使动画反向执行
+#####4.5 结束动画
+stopAnimation
+####5. 动画三种状态的转换（inactive、active、stopped）
+如下图所示：<br>
